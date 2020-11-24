@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class AlfaArchiveDepozitTests {
 
     @Test
-    void TestAlfa() {
+    void TestAlfaB() {
         open("https://alfabank.ru/");
         $(byText("Вклады")).click();
         $("body").shouldHave(text("Накопительные продукты"));
@@ -19,7 +19,7 @@ public class AlfaArchiveDepozitTests {
         $$(byText("Архивные счета и депозиты")).find(visible).parent().click();
         $$(byText("Депозиты")).find(visible).parent().click();
         $("body").shouldHave(text("Вклады"));
-        $$("div[data-widget-name=\"CatalogCard\"]").shouldHaveSize(5);
+        $$("div[data-widget-name='CatalogCard']").shouldHaveSize(5);
     }
 
 }
