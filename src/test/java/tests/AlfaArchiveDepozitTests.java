@@ -21,5 +21,10 @@ public class AlfaArchiveDepozitTests {
         $("body").shouldHave(text("Вклады"));
         $$("div[data-widget-name='CatalogCard']").shouldHaveSize(5);
     }
+    
+    @Test
+    void assertTrueTest(){
+        assertTrue(3>1);
+    }
 
 }
